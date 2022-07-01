@@ -12,7 +12,7 @@ class MechWarrior {
 class Clan {
     constructor(name) {
         this.name = name;
-        this.mechWarrior = [];
+        this.TeamMechwarrior = [];
     }
 
     addMechwarrior(player) {
@@ -36,18 +36,19 @@ class Menu {
 
     start() {
         let selection = this.showMainMenuOptions();
+
         while (selection != 0) {
             switch (selection) {
-                case `1`:
-                    this.createclan();
+                case '1':
+                    this.createTeam();
                     break;
-                case `2`:
+                case '2':
                     this.viewclan();
                     break;
-                case `3`:
+                case '3':
                     this.deleteclan();
                     break;
-                case `4`:
+                case '4':
                     this.displayclans();
                     break;
                 default:
