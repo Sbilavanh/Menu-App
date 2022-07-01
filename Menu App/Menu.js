@@ -87,7 +87,11 @@ class Menu {
         let index = prompt('Enter the index of the team you wish to view:');
         if (index > -1 && index < this.teams.length) {
             this.selectedTeam = this.teams[index];
-            let description = 'Team Name: ' + this.selectedTeam.name
+            let description = 'Team Name: ' + this.selectedTeam.name + '\n';
+
+            for (let i = 0; i < this.selectedTeam.players.length; i++) {
+                description += i + ') ' this.selectedTeam.players[i].name + ' - ' + this.selectedTeam.players[i].position + '\n';
+            }
         }
     }
 }

@@ -56,7 +56,7 @@ class Menu {
             selection = this.showMainMenuOptions();
         }
 
-        alert(`Goodbye!`);
+        alert('Goodbye!');
     }
 
     showMainMenuOptions() {
@@ -83,7 +83,7 @@ class Menu {
     displayClans() {
         let clanString = '';
         for (let i = 0; i < this.clan.length; i++) {
-            clanString += i + `)` + this.clans[i].name + `\n`;
+            clanString += i + ')' + this.clans[i].name + '\n';
         }
         alert(clanString);
     }
@@ -94,13 +94,13 @@ class Menu {
     }
 
     viewClan() {
-        let index = prompt(`Enter the index of the clan you wish to view:`);
+        let index = prompt('Enter the index of the clan you wish to view:');
         if (index > -1 && index < this.clans.length) {
             this.selectionClan = this.clans[index];
-            let description = `Clan name: ` + this.selectedClan.name + `\n`;
+            let description = 'Clan name: ' + this.selectedClan.name + '\n';
 
             for (let i = 0; i < this.selectedClan.players.length; i++) {
-                description += i + `) ` + this.selectedClan.players[i].name + ` - ` + this.selectedClan.players[i].position + `\n`;
+                description += i + ') ' + this.selectedClan.players[i].name + ' - ' + this.selectedClan.players[i].position + '\n';
             }
 
             let selection = this.showMainMenuOptions(description);
@@ -115,20 +115,20 @@ class Menu {
     }
 
     deleteClan() {
-        let index = prompt(`Enter the index of the clan you wish to delete:`);
+        let index = prompt('Enter the index of the clan you wish to delete:');
         if (index > -1 && index < this.clan.length) {
             this.clans.splice(index, 1);
         }
     }
 
     createMechwarrior() {
-        let name = prompt(`Enter name for new Mechwarrior:`);
+        let name = prompt('Enter name for new Mechwarrior:');
         let position = prompt(`Enter position for new Mechwarrior:`);
         this.selectedClan.mechWarriors.push(new mechWarrior(name, position));
     }
 
     deleteMechwarrior() {
-        let index = prompt(`Enter the index of the mechwarrior you wish to delete:`);
+        let index = prompt('Enter the index of the mechwarrior you wish to delete:');
         if (index > 1 && index < this.selectedClan.mechWarriors.length) {
             this.selectedClan.mechWarriors.splice(index, 1);
         }
