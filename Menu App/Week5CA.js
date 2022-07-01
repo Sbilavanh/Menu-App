@@ -70,7 +70,7 @@ class Menu {
         `);
     }
 
-    showMainMenuOptions(teamInfo) {
+    showTeamMenuOptions(teamInfo) {
         return prompt(`
             0) back
             1) create player
@@ -81,9 +81,9 @@ class Menu {
     }
 
     displayTeams() {
-        let compString = '';
+        let teamString = '';
         for (let i = 0; i < this.teams.length; i++) {
-            compString += i + ')' + this.teams[i].name + '\n';
+            teamString += i + ')' + this.teams[i].name + '\n';
         }
         alert(teamString);
     }
