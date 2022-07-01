@@ -43,13 +43,13 @@ class Menu {
                     this.createTeam();
                     break;
                 case '2':
-                    this.selectMechwarrior();
+                    this.viewTeam();
                     break;
                 case '3':
                     this.deleteTeam();
                     break;
                 case '4':
-                    this.viewClan();
+                    this.displayTeams();
                     break;
                 default:
                     selection = 0;
@@ -80,7 +80,7 @@ class Menu {
         `);
     }
 
-    displayCom() {
+    displayTeams() {
         let compString = '';
         for (let i = 0; i < this.teams.length; i++) {
             compString += i + ')' + this.teams[i].name + '\n';
@@ -137,4 +137,4 @@ class Menu {
 }
 
 let menu = new Menu();
-menu.start();
+menu.start(); 
