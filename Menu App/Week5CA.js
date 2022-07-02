@@ -125,13 +125,13 @@ class Menu {
     createPlayer() {
         let name = prompt('Enter the Mechwarrior name:');
         let position = prompt('Enter the Mechwarrior class:');
-        this.selectedTeam.teamMechwarriors.push(new Character(name, position));
+        this.selectedTeam.teamMechwarrior.push(new Character(name, position));
     }
 
     deletePlayer() {
         let index = prompt('Enter the name of the Mechwarrior that you wish to delete:');
         if (index > -1 && index < this.selectedTeam.teamMechwarriors.length) {
-            this.selectedTeam.teamMechwarriors.splice(index, 1);
+            this.selectedTeam.teamMechwarrior.splice(index, 1);
         }
     }
 }
