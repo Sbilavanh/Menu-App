@@ -64,9 +64,9 @@ class Menu {
         return prompt(`
             0) exit
             1) create team
-            2) select Mechwarrior
+            2) view teams
             3) delete team
-            4) view clan
+            4) display Clan
         `);
     }
 
@@ -116,7 +116,7 @@ class Menu {
     }
 
     deleteTeam() {
-        let index = prompt('Enter the name of the Mechwarrior that you wish to delete:');
+        let index = prompt('Enter the name of the clan that you wish to delete:');
         if (index > -1 && index < this.teams.length) {
             this.teams.splice(index, 1);
         }
@@ -125,7 +125,7 @@ class Menu {
     createPlayer() {
         let name = prompt('Enter the Mechwarrior name:');
         let position = prompt('Enter the Mechwarrior class:');
-        this.selectedTeam.teamMechwarriors.push(new this.createPlayer(name, position));
+        this.selectedTeam.teamMechwarriors.push(new Character(name, position));
     }
 
     deletePlayer() {
